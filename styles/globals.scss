@@ -1,0 +1,9 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+main {
+	@apply bg-red-500 grid w-screen h-screen place-content-center font-sans text-4xl font-bold text-gray-50;
+}
