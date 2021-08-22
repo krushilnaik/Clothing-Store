@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Oswald, sans-serif;
+}
+
+main {
+	@apply bg-red-500 grid w-screen h-screen place-content-center font-sans text-4xl font-bold text-gray-50;
+}
+
+.menu-item {
+	@apply min-w-[30%] h-60 flex-auto flex items-center justify-center border-2 border-black m-2 first:mr-2 last:ml-2 bg-center bg-cover cursor-pointer;
+
+	&.large {
+		@apply h-96;
+	}
+
+	> div {
+		@apply h-24 px-6 flex flex-col items-center justify-center bg-gray-100 bg-opacity-60;
+	}
+
+	&:hover {
+		animation: growBackground 5s linear forwards;
+	}
+}
+
+@keyframes growBackground {
+	from {
+		background-size: 100%;
+	}
+}
