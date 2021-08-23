@@ -5,6 +5,8 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: Oswald, sans-serif;
+
+	// border: dashed 2px red;
 }
 
 // this should be removed during production
@@ -15,10 +17,9 @@
 #__next {
 	@apply grid;
 
-	padding: 2.5rem;
 	grid-template-rows: 3.5rem 1fr;
-	width: 100vw;
-	height: 100vh;
+	padding: 2rem 2.5rem;
+	min-height: 100vh;
 }
 
 main {
@@ -26,7 +27,7 @@ main {
 }
 
 .link {
-	@apply uppercase hover:text-red-300 duration-200 transition-colors;
+	@apply flex uppercase hover:text-red-300 duration-200 transition-colors;
 }
 
 .shop-category {

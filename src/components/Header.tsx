@@ -5,7 +5,7 @@ interface Props {}
 
 function Header({}: Props): ReactElement {
 	return (
-		<header className='flex flex-row justify-between'>
+		<header className='flex flex-row justify-between items-center'>
 			<Link href='/'>LOGO</Link>
 
 			<ul className='flex flex-row justify-between gap-12'>
