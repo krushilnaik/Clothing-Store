@@ -40,11 +40,10 @@ function HomePage({}: Props): ReactElement {
 		<main>
 			<div className='flex flex-wrap justify-between gap-3'>
 				{sections.map(({ id, title, imageUrl, large }) => (
-					<Link href={`/shop/${title}`}>
+					<Link href={`/shop/${title}`} key={id}>
 						<div
 							className={`shop-category ${large && 'large'}`}
 							style={{ '--background': `url(${imageUrl})` } as CSSProperties}
-							key={id}
 						>
 							<div className='bg-gray-200 bg-opacity-80 p-3 text-center'>
 								<h1 className='font-bold mb-2 text-2xl text-gray-600 uppercase'>
