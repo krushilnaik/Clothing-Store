@@ -11,28 +11,67 @@
 	font-family: Oswald, sans-serif;
 }
 
-main {
-	@apply bg-red-500 grid w-screen h-screen place-content-center font-sans text-4xl font-bold text-gray-50;
+#__next {
+	@apply grid;
+
+	padding: 2.5rem;
+	grid-template-rows: 3.5rem 1fr;
+	width: 100vw;
+	height: 100vh;
 }
 
-.menu-item {
-	@apply min-w-[30%] h-60 flex-auto flex items-center justify-center border-2 border-black m-2 first:mr-2 last:ml-2 bg-center bg-cover cursor-pointer;
+main {
+	@apply w-full h-full font-sans font-bold;
+}
 
-	&.large {
-		@apply h-96;
-	}
+.link {
+	@apply uppercase hover:text-red-300 duration-200 transition-colors;
+}
 
-	> div {
-		@apply h-24 px-6 flex flex-col items-center justify-center bg-gray-100 bg-opacity-60;
+.shop-category {
+	position: relative;
+
+	@apply min-w-full lg:min-w-[30%] h-60 flex-auto cursor-pointer flex justify-center items-center;
+
+	&::before {
+		content: '';
+		position: absolute;
+		background-image: var(--background);
+
+		@apply bg-center bg-cover w-full h-full z-[-1];
 	}
 
 	&:hover {
-		animation: growBackground 5s linear forwards;
+		&::before {
+			animation: growBackground 8s forwards linear, darkenBackground 0.5s forwards;
+		}
+
+		> div {
+			@apply bg-opacity-60 transition-colors duration-300;
+		}
+	}
+
+	&.large {
+		@apply lg:h-96;
 	}
 }
 
 @keyframes growBackground {
 	from {
 		background-size: 100%;
+	}
+
+	to {
+		background-size: 200%;
+	}
+}
+
+@keyframes darkenBackground {
+	from {
+		filter: brightness(1);
+	}
+
+	to {
+		filter: brightness(0.8);
 	}
 }
