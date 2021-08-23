@@ -44,6 +44,8 @@ main {
 
 	&:hover {
 		&::before {
+			background-size: 100%;
+			filter: brightness(1);
 			animation: growBackground 8s forwards linear, darkenBackground 0.5s forwards;
 		}
 
