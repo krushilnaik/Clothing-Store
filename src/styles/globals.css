@@ -15,16 +15,12 @@
   @apply grid;
   -ms-grid-rows: 3.5rem 1fr;
       grid-template-rows: 3.5rem 1fr;
-  padding: 2rem 2.5rem;
+  padding: 1rem;
   min-height: 100vh;
 }
 
 main {
   @apply w-full h-full font-sans font-bold;
-}
-
-.link {
-  @apply flex uppercase hover:text-red-300 duration-200 transition-colors;
 }
 
 .shop-category {
