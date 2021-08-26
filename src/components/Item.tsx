@@ -2,16 +2,18 @@ import React, { ReactElement } from 'react';
 
 interface Props {
 	name: string;
+	imageUrl: string;
+	price: number;
 }
 
-function Item({ name }: Props): ReactElement {
+function Item({ name, imageUrl, price }: Props): ReactElement {
 	return (
 		<div>
-			<img src='https://via.placeholder.com/380x450' alt='' />
+			<img src={imageUrl ?? 'https://via.placeholder.com/380x450'} alt='' />
 
 			<div className='flex justify-between text-xl font-normal'>
 				<span>{name}</span>
-				<span>cost</span>
+				<span>{price}</span>
 			</div>
 		</div>
 	);
