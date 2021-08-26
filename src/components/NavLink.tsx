@@ -8,7 +8,7 @@ interface Props {
 
 function NavLink({ link, text }: Props): ReactElement {
 	return (
-		<li className='flex uppercase transition-colors duration-200 hover:text-red-300'>
+		<li className='uppercase transition-colors duration-200 hover:text-red-300'>
 			<Link href={link}>{text}</Link>
 		</li>
 	);

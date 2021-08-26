@@ -18,7 +18,7 @@
 	@apply grid;
 
 	grid-template-rows: 3.5rem 1fr;
-	padding: 1rem;
+	padding: 1rem 3.5rem;
 	min-height: 100vh;
 }
 
@@ -54,6 +54,10 @@ main {
 	&.large {
 		@apply lg:h-96;
 	}
+}
+
+.shrink {
+	@apply text-xs top-[-14px] text-black;
 }
 
 @keyframes growBackground {
